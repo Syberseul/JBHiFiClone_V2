@@ -146,7 +146,7 @@
 }
 .header__line_3_wrapper:hover > .header__line_3_icon,
 .header__line_3_wrapper:hover > .header__line_3_text {
-  color: #000;
+  color: #010;
 }
 
 @media screen and (min-width: 850px) {
