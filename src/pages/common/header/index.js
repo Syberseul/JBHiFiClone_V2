@@ -1,10 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import SideMenu from "../sideMenu/SideMenu";
 
 import { actionCreators } from "./store";
 
 import "./style.css";
+
+import HeaderOptions from "./HeaderOptions";
 
 import {
   LocationOn as LocationOnIcon,
@@ -46,7 +49,7 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
           </div>
 
           <div className="header__wrapper">
-            <HelpOutlineIcon className="header_icon" />
+            <HelpOutlineIcon className="header__icon" />
             <p className="header__storeFinder">Help & Support</p>
             <Link
               to="/login"
@@ -56,7 +59,6 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
               <div className="header__mobileWrapper">
                 <AccountCircleIcon />
                 {/* {loggedIn && <p>{userName}</p>} */}
-                <p>userName</p>
                 <p className="header__mobileText">Account</p>
               </div>
             </Link>
@@ -114,28 +116,15 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
 
       <nav style={{ backgroundColor: "#000" }}>
         <div className="header__wrapperLine__3">
-          <div className="header__line_3_wrapper">
-            <HomeIcon className="header__line_3_icon" />
-            <p className="header__line_3_text">Products</p>
-          </div>
-          <div className="header__line_3_wrapper">
-            <LabelIcon className="header__line_3_icon" />
-            <p className="header__line_3_text">Brands</p>
-          </div>
-          <div className="header__line_3_wrapper">
-            <NotificationsNoneIcon className="header__line_3_icon" />
-            <p className="header__line_3_text">Deals & Sales</p>
-          </div>
-          <div className="header__line_3_wrapper">
-            <BuildIcon className="header__line_3_icon" />
-            <p className="header__line_3_text">Services</p>
-          </div>
-          <div className="header__line_3_wrapper">
-            <CardGiftCardIcon className="header__line_3_icon" />
-            <p className="header__line_3_text">Gift Cards</p>
-          </div>
+          <HeaderOptions Icon={HomeIcon} title={"Products"} />
+          <HeaderOptions Icon={LabelIcon} title={"Brands"} />
+          <HeaderOptions Icon={NotificationsNoneIcon} title={"Deals & Sales"} />
+          <HeaderOptions Icon={BuildIcon} title={"Services"} />
+          <HeaderOptions Icon={CardGiftCardIcon} title={"Gift Cards"} />
         </div>
       </nav>
+
+      {menuOpen && <SideMenu />}
     </div>
   );
 }

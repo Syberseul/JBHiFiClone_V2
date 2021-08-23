@@ -1,0 +1,25 @@
+.headerOptions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.headerOptions:hover {
+  background-color: #ffec0f;
+}
+
+.headerOptions__icon {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.headerOptions > p {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.headerOptions:hover > .headerOptions__icon,
+.headerOptions:hover > p {
+  color: #000;
+}

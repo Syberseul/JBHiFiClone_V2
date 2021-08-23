@@ -146,7 +146,7 @@
 }
 .header__line_3_wrapper:hover > .header__line_3_icon,
 .header__line_3_wrapper:hover > .header__line_3_text {
-  color: #010;
+  color: #000;
 }
 
 @media screen and (min-width: 850px) {
@@ -156,9 +156,7 @@
   .header__mobileText {
     display: none;
   }
-  .header__icon {
-    display: none;
-  }
+
   .header__phoneImg {
     display: none;
   }
@@ -168,8 +166,8 @@
 }
 
 @media screen and (max-width: 850px) {
-  .header__wrapper {
-    display: none;
+  .header__icon {
+    display: none !important;
   }
   .header__storeFinder {
     display: none;

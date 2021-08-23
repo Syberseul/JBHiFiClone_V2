@@ -1,0 +1,35 @@
+.sideMenuOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.sideMenuOptions:hover {
+  border-radius: 10px;
+  background-color: #ffec0f;
+}
+.sideMenuOptions:hover > .sideMenuOption__line {
+  margin-left: 10px;
+}
+.sideMenuOptions > div:last-child {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.sideMenuOptions:hover > div:last-child {
+  margin-right: 10px;
+}
+
+.sideMenuOption__line {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  padding: 10px 20px;
+}
+
+.sideMenuOption__icon {
+  margin-right: 20px;
+  height: 40px;
+}

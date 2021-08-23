@@ -1,0 +1,21 @@
+.sideMenu {
+  width: 100vw;
+  height: 850wh;
+}
+
+.sideMenu__upperWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto 30px;
+  padding-top: 20px;
+}
+.sideMenu__lowerWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto 30px;
+  padding-top: 20px;
+}
+
+.sideMenu__link {
+  text-decoration: none;
+}
