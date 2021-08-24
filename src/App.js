@@ -1,6 +1,7 @@
 import { Provider } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./pages/common/header";
+import Home from "./pages/Home";
 import store from "./Store";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Route path="/" exact>
-          {/* <Home /> */}
+          <Home />
         </Route>
         <Route path="/wishList">{/* <WishList /> */}</Route>
         <Route path="login">{/* <SignIn /> */}</Route>

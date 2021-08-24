@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "amz-clone-yt-c021e"
-  }
+    "default": "jb-hifi-clone-yiteng",
+    "build": "jb-hifi-clone-yiteng"
+  },
+  "targets": {}
 }

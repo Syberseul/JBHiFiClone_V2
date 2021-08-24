@@ -1,0 +1,142 @@
+.homeBanner {
+  width: 100%;
+  min-height: 200px;
+}
+
+.homeBanner__imgWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.homeBanner__imgWrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homeSubBanner {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeItem {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #bbb;
+  margin: 20px auto;
+  height: 220px;
+  cursor: pointer;
+}
+
+.homeItem__upperWrapper {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.homeItem__upperWrapper > img {
+  width: 60px;
+  height: 60px;
+  margin: 10px 20px;
+  object-fit: contain;
+}
+
+.homeItem__upperWrapper__right {
+  margin: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.homeItem__category {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.homeItem__title {
+  line-height: 30px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.homeItem__lowerWrapper {
+  height: 50px;
+  width: 100%;
+  background-color: #ffec0f;
+  position: relative;
+}
+
+.homeItem__price {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  border: 1px solid #000;
+  padding: 8px;
+  background-color: #ffec0f;
+  box-shadow: 2px 2px rgba(0, 0, 0, 1);
+}
+
+@media only screen and (max-width: 630px) {
+  .homeItem {
+    width: 100%;
+  }
+  .homeItem__category {
+    font-size: 20px;
+  }
+  .homeItem__title {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .homeItem {
+    width: 40%;
+  }
+  .homeItem__title {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .homeItem {
+    width: 20%;
+  }
+  .homeItem__title {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .homeSubBanner {
+    margin-top: 0;
+  }
+
+  .homeSubBanner__div {
+    display: none;
+  }
+
+  .homeSubBanner__div1 {
+    width: 100%;
+  }
+
+  .homeSubBannerImg {
+    width: 100%;
+  }
+}

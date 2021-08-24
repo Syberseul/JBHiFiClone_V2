@@ -5,7 +5,7 @@ import SideMenu from "../sideMenu/SideMenu";
 
 import { actionCreators } from "./store";
 
-import "./style.css";
+import "./common.css";
 
 import HeaderOptions from "./HeaderOptions";
 

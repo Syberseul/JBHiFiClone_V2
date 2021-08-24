@@ -1,15 +1,17 @@
-import firebase from "firebase/app";
-import "firebase/auth";
+import firebase from "firebase";
+import config from "../config";
 
-const app = firebase.initializeApp({
-  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
-  authDomain: process.env.REACT_APP_GOOGLE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_GOOGLE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_GOOGLE_STORAGE_BUCKET,
-  REACT_APP_GOOGLE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_GOOGLE_APP_ID,
-});
+const firebaseConfig = {
+  apiKey: config.firebase.api_key,
+  authDomain: config.firebase.auth_domain,
+  projectId: config.firebase.project_id,
+  storageBucket: config.firebase.storage_bucket,
+  messagingSenderId: config.firebase.messaging_sender_id,
+  appId: config.firebase.app_id,
+};
 
-export const auth = app.auth();
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export default app;
+const auth = firebase.auth();
+
+export { auth, firebaseApp };

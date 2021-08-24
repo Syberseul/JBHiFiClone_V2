@@ -11,6 +11,7 @@ const reducer = (state = defaultState, action) => {
 
     case actionTypes.CLOSE_MENU:
       return { ...state, menuOpen: false };
+
     default:
       return state;
   }
