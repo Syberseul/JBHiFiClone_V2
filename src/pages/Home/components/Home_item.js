@@ -38,7 +38,13 @@ function Home_item(props) {
             //   }
             // }}
           />
+          <p className="homeItem__toolTip wishList">Wish List</p>
         </div>
+        <AddShoppingCartIcon
+          className="homeItem__addToCart"
+          // onClick={() => addItemToCart(props.item)}
+        />
+        <p className="homeItem__toolTip cart">Add to your cart</p>
       </div>
     </div>
   );

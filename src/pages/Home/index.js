@@ -1,33 +1,18 @@
-import React, { useEffect } from "react";
-
-import { connect } from "react-redux";
+import React from "react";
 import Home_banner from "./components/Home_banner";
+import Home_recommend from "./components/Home_recommend";
 import Home_subBanner from "./components/Home_subBanner";
 
 import "./Home.css";
-import { actionCreators } from "./store";
 
-function Home({ items, fetchHomeData }) {
-  useEffect(() => {
-    fetchHomeData();
-  }, []);
-
+function Home() {
   return (
     <div className="homePage">
       <Home_banner />
       <Home_subBanner />
+      <Home_recommend />
     </div>
   );
 }
 
-const mapState = (state) => ({
-  items: state.home.items,
-});
-
-const mapDispatch = (dispatch) => ({
-  fetchHomeData() {
-    dispatch(actionCreators.getHomeInfo());
-  },
-});
-
-export default connect(mapState, mapDispatch)(Home);
+export default Home;
