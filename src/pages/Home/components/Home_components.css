@@ -120,11 +120,11 @@
   z-index: 10;
 }
 
-.wishList {
+.toWishList {
   right: 20px;
 }
 
-.cart {
+.toCart {
   right: 0;
 }
 
@@ -143,8 +143,8 @@
   background-color: #333;
 }
 
-.homeItem__addToWishList:hover + .wishList,
-.homeItem__addToCart:hover + .cart {
+.homeItem__addToWishList:hover + .toWishList,
+.homeItem__addToCart:hover + .toCart {
   display: block;
 }
 

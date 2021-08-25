@@ -102,7 +102,7 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
                 <p style={{ cursor: "pointer" }}>My Account</p>
               </div>
             </Link>
-            <Link to="/myCart" className="header__link">
+            <Link to="/cart" className="header__link">
               <div className="header__subIconWrapper">
                 <ShoppingCartIcon />
                 {/* {totalAmountInCart > 0 && <p className="header__quantity">{totalAmountInCart}</p>} */}

@@ -9,6 +9,7 @@ import "./Home_components.css";
 
 function Home_item(props) {
   const { title, price, image, category } = props.item;
+  const { addItemToCart } = props;
 
   // const {wishList, addItemToCart, addItemToWishList, removeItemFromWishList} = props;
 
@@ -26,7 +27,7 @@ function Home_item(props) {
 
       <div className="homeItem__lowerWrapper">
         <p className="homeItem__price">${price}</p>
-        <div className="homeItem__addToWishListWrapper">
+        <div>
           <FavoriteBorderIcon
             className="homeItem__addToWishList"
             // style={{color: foundItem ? "red" : "black"}}
@@ -38,13 +39,15 @@ function Home_item(props) {
             //   }
             // }}
           />
-          <p className="homeItem__toolTip wishList">Wish List</p>
+          <p className="homeItem__toolTip toWishList">Wish List</p>
         </div>
-        <AddShoppingCartIcon
-          className="homeItem__addToCart"
-          // onClick={() => addItemToCart(props.item)}
-        />
-        <p className="homeItem__toolTip cart">Add to your cart</p>
+        <div>
+          <AddShoppingCartIcon
+            className="homeItem__addToCart"
+            onClick={() => addItemToCart(props.item)}
+          />
+          <p className="homeItem__toolTip toCart">Add to your cart</p>
+        </div>
       </div>
     </div>
   );
@@ -55,7 +58,9 @@ const mapState = (state) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-  // dispatch addItemToCart
+  addItemToCart(item) {
+    dispatch(actionCreators.addItemToCart(item));
+  },
   // dispatch addItemToWishList
   // dispatch removeItemFromWishList
 });
