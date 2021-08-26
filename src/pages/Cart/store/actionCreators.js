@@ -11,6 +11,6 @@ export const incrementItem = (item) => ({
 });
 
 export const deleteItem = (item) => ({
-  type: actionTypes.DECREMENT_ITEM,
+  type: actionTypes.DELETE_ITEM,
   item,
 });
