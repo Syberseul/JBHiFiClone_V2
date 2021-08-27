@@ -44,7 +44,7 @@
   text-decoration: none;
   color: #000;
 }
-.header__quantity {
+.header__mobileQuantity {
   position: absolute;
   top: -10px;
   left: 15px;
@@ -104,7 +104,7 @@
   cursor: pointer;
   position: relative;
 }
-.header__pcQuantity {
+.header__PcQuantity {
   position: absolute;
   top: -10px;
   right: 10px;
@@ -113,7 +113,7 @@
   padding: 2px 4px;
   border-radius: 50%;
 }
-.header__quantity:hover {
+.header__PcQuantity:hover {
   color: #555;
 }
 .header__wrapperLine__3 {
@@ -160,7 +160,7 @@
   .header__phoneImg {
     display: none;
   }
-  .header__quantity {
+  .header__mobileQuantity {
     display: none;
   }
 }

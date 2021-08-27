@@ -27,7 +27,12 @@ import {
 
 import logo from "../../../static/logo.jpg";
 
-function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
+function Header({
+  menuOpen,
+  itemsAmountInCart,
+  toggleMenuOpen,
+  toggleMenuClose,
+}) {
   return (
     <div className="header">
       <nav style={{ backgroundColor: "#ffec0f" }}>
@@ -63,14 +68,15 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
               </div>
             </Link>
             <Link
-              to="/myCart"
+              to="/cart"
               className="header__link"
               onClick={menuOpen && toggleMenuClose}
             >
               <div className="header__mobileWrapper">
                 <ShoppingCartIcon />
-                {/* {totalAmountInCard > 0 && <p className="header__quantity">{totalAmountInCard}</p>} */}
-                <p className="header__quantity">33</p>
+                {itemsAmountInCart > 0 && (
+                  <p className="header__mobileQuantity">{itemsAmountInCart}</p>
+                )}
                 <p className="header__mobileText">Cart</p>
               </div>
             </Link>
@@ -105,8 +111,9 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
             <Link to="/cart" className="header__link">
               <div className="header__subIconWrapper">
                 <ShoppingCartIcon />
-                {/* {totalAmountInCart > 0 && <p className="header__quantity">{totalAmountInCart}</p>} */}
-                <p className="header__pcQuantity">3</p>
+                {itemsAmountInCart > 0 && (
+                  <p className="header__PcQuantity">{itemsAmountInCart}</p>
+                )}
                 <p style={{ cursor: "pointer" }}>My Cart</p>
               </div>
             </Link>
@@ -131,6 +138,7 @@ function Header({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
 
 const mapState = (state) => ({
   menuOpen: state.header.menuOpen,
+  itemsAmountInCart: state.cart.totalAmount,
 });
 
 const mapDispatch = (dispatch) => ({

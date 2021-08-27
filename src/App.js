@@ -13,9 +13,9 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/wishList">{/* <WishList /> */}</Route>
-        <Route path="login">{/* <SignIn /> */}</Route>
-        <Route path="/account">my account</Route>
+        <Route path="/wishList">Wish List</Route>
+        <Route path="login">Sign In</Route>
+        <Route path="/account">My Account</Route>
         <Route path="/cart">
           <Cart />
         </Route>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import "./cart.css";
 import Cart_emptyCart from "./components/Cart_emptyCart";
