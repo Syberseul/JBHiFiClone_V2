@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { actionCreators } from "../store";
 import { actionCreators as wishListActionCreators } from "../../WishList/store";
@@ -7,13 +7,11 @@ import {
   AddShoppingCart as AddShoppingCartIcon,
 } from "@material-ui/icons";
 import "./Home_components.css";
-import { useState } from "react";
 
 function Home_item(props) {
   const { item } = props;
   const { title, price, image, category } = props.item;
-  const { wishList, addItemToCart, addItemToWishList, removeItemFromWishList } =
-    props;
+  const { addItemToCart, addItemToWishList, removeItemFromWishList } = props;
 
   const [inWishList, setInWishList] = useState(false);
 
@@ -69,10 +67,6 @@ function Home_item(props) {
   );
 }
 
-const mapState = (state) => ({
-  wishList: state.wishList.itemsInWishList,
-});
-
 const mapDispatch = (dispatch) => ({
   addItemToCart(item) {
     dispatch(actionCreators.addItemToCart(item));
@@ -85,4 +79,4 @@ const mapDispatch = (dispatch) => ({
   },
 });
 
-export default connect(mapState, mapDispatch)(Home_item);
+export default connect(null, mapDispatch)(Home_item);
