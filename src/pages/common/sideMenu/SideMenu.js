@@ -44,6 +44,7 @@ function SideMenu({ menuOpen, toggleMenuOpen, toggleMenuClose }) {
       <div className="sideMenu__lowerWrapper">
         <Link
           //   to={loggedIn ? "/wishList" : "/login"}
+          to="/wishList"
           className="sideMenu__link"
           onClick={menuOpen ? toggleMenuClose : toggleMenuOpen}
         >

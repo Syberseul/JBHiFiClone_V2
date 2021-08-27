@@ -1,19 +1,31 @@
 import React from "react";
 import { connect } from "react-redux";
 import { actionCreators } from "../store";
+import { actionCreators as wishListActionCreators } from "../../WishList/store";
 import {
   FavoriteBorder as FavoriteBorderIcon,
   AddShoppingCart as AddShoppingCartIcon,
 } from "@material-ui/icons";
 import "./Home_components.css";
+import { useState } from "react";
 
 function Home_item(props) {
+  const { item } = props;
   const { title, price, image, category } = props.item;
-  const { addItemToCart } = props;
+  const { wishList, addItemToCart, addItemToWishList, removeItemFromWishList } =
+    props;
 
-  // const {wishList, addItemToCart, addItemToWishList, removeItemFromWishList} = props;
+  const [inWishList, setInWishList] = useState(false);
 
-  // const foundItem = wishList.find(obj => obj.title === title);
+  const addToWishList = (item) => {
+    setInWishList(true);
+    addItemToWishList(item);
+  };
+
+  const removeFromWishList = (item) => {
+    setInWishList(false);
+    removeItemFromWishList(item);
+  };
 
   return (
     <div className="homeItem">
@@ -30,16 +42,20 @@ function Home_item(props) {
         <div>
           <FavoriteBorderIcon
             className="homeItem__addToWishList"
-            // style={{color: foundItem ? "red" : "black"}}
-            // onClick={() => {
-            //   {
-            //     fountItem
-            //       ? removeItemFromWishList(props.item)
-            //       : addItemToWishList(props.item);
-            //   }
-            // }}
+            style={{ color: inWishList ? "red" : "black" }}
+            onClick={() => {
+              {
+                !inWishList ? addToWishList(item) : removeFromWishList(item);
+              }
+            }}
           />
-          <p className="homeItem__toolTip toWishList">Wish List</p>
+          {inWishList ? (
+            <p className="homeItem__toolTip toWishList">
+              Remove from wish list
+            </p>
+          ) : (
+            <p className="homeItem__toolTip toWishList">Wish List</p>
+          )}
         </div>
         <div>
           <AddShoppingCartIcon
@@ -54,15 +70,19 @@ function Home_item(props) {
 }
 
 const mapState = (state) => ({
-  // get data from wishList store
+  wishList: state.wishList.itemsInWishList,
 });
 
 const mapDispatch = (dispatch) => ({
   addItemToCart(item) {
     dispatch(actionCreators.addItemToCart(item));
   },
-  // dispatch addItemToWishList
-  // dispatch removeItemFromWishList
+  addItemToWishList(item) {
+    dispatch(wishListActionCreators.addItemToWishList(item));
+  },
+  removeItemFromWishList(item) {
+    dispatch(wishListActionCreators.removeFromWishList(item));
+  },
 });
 
 export default connect(mapState, mapDispatch)(Home_item);

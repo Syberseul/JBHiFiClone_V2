@@ -16,7 +16,7 @@ function Cart_item({ item, incrementItem, decrementItem, deleteItem }) {
     decrementItem(item);
   };
 
-  return amount > 0 ? (
+  return itemAmount > 0 ? (
     <div className="cart__item">
       <img src={image} alt="" />
       <div className="cart__itemMiddleLine">

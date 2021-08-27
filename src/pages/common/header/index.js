@@ -94,6 +94,7 @@ function Header({
           <div className="header__iconsWrapper">
             <Link
               // to={loggedIn ? "/wishList" : "/login"}
+              to="/wishList"
               className="header__link"
             >
               <div className="header__subIconWrapper">
