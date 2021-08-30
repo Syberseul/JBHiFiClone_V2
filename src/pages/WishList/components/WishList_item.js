@@ -20,7 +20,7 @@ function WishList_item({ item, removeFromWishList, addItemToCart }) {
         </div>
       </div>
       <div className="wishList__itemBottomWrapper">
-        <p className="wishList__price"></p>
+        <p className="wishList__price">$ {price}</p>
         <div className="wishList__addToWishListWrapper">
           <FavoriteBorderIcon
             className="wishList__addToWishListIcon"
@@ -30,10 +30,13 @@ function WishList_item({ item, removeFromWishList, addItemToCart }) {
           />
           <p className="wishList__toolTip">Remove from wish list</p>
         </div>
-        <AddShoppingCartIcon
-          className="wishList__addToCartIcon"
-          onClick={() => addItemToCart(item)}
-        />
+        <div className="wishList__addToCartWrapper">
+          <AddShoppingCartIcon
+            className="wishList__addToCartIcon"
+            onClick={() => addItemToCart(item)}
+          />
+          <p className="wishList__cartToolTip">Add to cart</p>
+        </div>
       </div>
     </div>
   );

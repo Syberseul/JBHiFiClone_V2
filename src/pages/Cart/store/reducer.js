@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 import { actionTypes as actionTypesFromHome } from "../../Home/store";
-// import {actionTypes as actionTypesFromWishList} from "../../WishList/store"
+import { actionTypes as actionTypesFromWishList } from "../../WishList/store";
 
 const defaultState = {
   itemsInCart: [],
@@ -77,7 +77,7 @@ export default (state = defaultState, action) => {
   switch (action.type) {
     case actionTypes.INCREMENT_ITEM:
     case actionTypesFromHome.ADD_ITEM_TO_CART:
-      // case actionTypesFromWishList.ADD_ITEM_TO_CART:
+    case actionTypesFromWishList.ADD_ITEM_TO_CART:
       return addItemToCart(state, action);
 
     case actionTypes.DECREMENT_ITEM:

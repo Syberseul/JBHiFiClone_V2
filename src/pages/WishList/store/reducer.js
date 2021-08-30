@@ -23,12 +23,16 @@ const addItemToWishList = (state, action) => {
 
 // remove
 const removeFromWishList = (state, { item }) => {
-  const { itemsInWishList } = state;
+  let { itemsInWishList } = state;
 
   let foundIndex = itemsInWishList.findIndex((i) => i.id === item.id);
-  itemsInWishList.splice(foundIndex, 1);
 
-  return state;
+  let tempList = [...itemsInWishList, itemsInWishList.splice(foundIndex, 1)];
+
+  return {
+    ...state,
+    itemsInWishList: itemsInWishList,
+  };
 };
 
 export default (state = defaultState, action) => {
