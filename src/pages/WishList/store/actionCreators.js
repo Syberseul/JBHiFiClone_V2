@@ -12,6 +12,6 @@ export const removeFromWishList = (item) => ({
 });
 
 export const addToCart = (item) => ({
-  type: actionTypes.ADD_TO_CART,
+  type: actionTypes.ADD_ITEM_TO_CART,
   item,
 });

@@ -3,12 +3,17 @@ import { connect } from "react-redux";
 import ItemList from "./components/WishList_itemList";
 import EmptyList from "./components/WishList_Empty";
 import "./WishList.css";
+import Item from "./components/WishList_item";
 
 function index({ wishList }) {
   return (
     <div className="wishList">
       {Object.keys(wishList).length !== 0 ? (
-        <ItemList wishList={wishList} />
+        wishList.map((item, index) => (
+          <div>
+            <Item key={index} item={item} />
+          </div>
+        ))
       ) : (
         <EmptyList />
       )}

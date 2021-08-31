@@ -16,7 +16,7 @@ const addItemToCart = (state, action) => {
   let foundItem = itemsInCart.find((obj) => obj.id === item.id);
 
   if (foundItem) {
-    item.amount += 1;
+    foundItem.amount += 1;
     return {
       ...state,
       totalAmount: totalAmount + 1,
@@ -38,10 +38,11 @@ const removeItemFromCart = (state, action) => {
   const { item } = action;
   let { itemsInCart, totalAmount, totalPrice } = state;
 
+  let foundItem = itemsInCart.find((obj) => obj.id === item.id);
   let foundIndex = itemsInCart.findIndex((i) => i.id === item.id);
 
-  if (item.amount > 1) {
-    item.amount -= 1;
+  if (foundItem.amount > 1) {
+    foundItem.amount -= 1;
     return {
       ...state,
       totalAmount: totalAmount - 1,
@@ -49,7 +50,7 @@ const removeItemFromCart = (state, action) => {
     };
   } else {
     item.amount = 0;
-    itemsInCart.splice(foundIndex, 1);
+    itemsInCart.splice(foundIndex, 0);
     return {
       ...state,
       totalAmount: totalAmount - 1,
