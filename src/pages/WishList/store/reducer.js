@@ -5,7 +5,7 @@ const defaultState = {
 };
 
 // add
-const addItemToWishList = (state, action) => {
+const addToWishList = (state, action) => {
   const { item } = action;
   const { itemsInWishList } = state;
 
@@ -24,21 +24,16 @@ const addItemToWishList = (state, action) => {
 // remove
 const removeFromWishList = (state, { item }) => {
   let { itemsInWishList } = state;
-
   let foundIndex = itemsInWishList.findIndex((i) => i.id === item.id);
+  itemsInWishList.splice(foundIndex, 1);
 
-  let tempList = [...itemsInWishList, itemsInWishList.splice(foundIndex, 1)];
-
-  return {
-    ...state,
-    itemsInWishList: itemsInWishList,
-  };
+  return state;
 };
 
 export default (state = defaultState, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_WISHLIST:
-      return addItemToWishList(state, action);
+      return addToWishList(state, action);
     case actionTypes.REMOVE_FROM_WISHLIST:
       return removeFromWishList(state, action);
     default:

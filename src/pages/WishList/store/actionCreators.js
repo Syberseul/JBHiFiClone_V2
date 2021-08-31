@@ -1,9 +1,8 @@
 import * as actionTypes from "./actionTypes";
 
-export const addItemToWishList = (item, inWishList) => ({
+export const addToWishList = (item) => ({
   type: actionTypes.ADD_TO_WISHLIST,
   item,
-  inWishList,
 });
 
 export const removeFromWishList = (item) => ({
