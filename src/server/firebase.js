@@ -10,8 +10,21 @@ const firebaseConfig = {
   appId: config.firebase.app_id,
 };
 
+const uiConfig = {
+  signInFlow: "popup",
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.GithubAuthProvider.PROVIDER_ID,
+    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+  ],
+  callbacks: {
+    signInSuccess: () => false,
+  },
+};
+
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
-export { auth, firebaseApp };
+export { auth, firebaseApp, uiConfig };
