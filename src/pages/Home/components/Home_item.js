@@ -32,7 +32,6 @@ function Home_item(props) {
         <img src={image} alt="" />
         <div className="homeItem__upperWrapper__right">
           <p className="homeItem__category">{category}</p>
-          <p>{foundItem ? "true" : "false"}</p>
           <p className="homeItem__title">{title}</p>
         </div>
       </div>

@@ -6,9 +6,20 @@ import {
   AddShoppingCart as AddShoppingCartIcon,
 } from "@material-ui/icons";
 import "./WishList_components.css";
+import { useState } from "react";
 
-function WishList_item({ item, removeFromWishList, addItemToCart }) {
+function WishList_item(props) {
+  const { item, wishList, removeFromWishList, addItemToCart } = props;
   const { title, price, category, image } = item;
+
+  let foundItem = wishList.find((obj) => obj.title === title);
+
+  const [inWishList, setInWishList] = useState(foundItem ? true : false);
+
+  const removeItem = (item) => {
+    removeFromWishList(item);
+    setInWishList(!inWishList);
+  };
 
   return (
     <div className="wishList__item">
@@ -24,11 +35,16 @@ function WishList_item({ item, removeFromWishList, addItemToCart }) {
         <div className="wishList__addToWishListWrapper">
           <FavoriteBorderIcon
             className="wishList__addToWishListIcon"
+            style={{ color: inWishList ? "red" : "black" }}
             onClick={() => {
-              removeFromWishList(item);
+              removeItem(item);
             }}
           />
-          <p className="wishList__toolTip">Remove from wish list</p>
+          {inWishList ? (
+            <p className="wishList__toolTip">Remove from wish list</p>
+          ) : (
+            <p className="wishList__toolTip">Add to wish list</p>
+          )}
         </div>
         <div className="wishList__addToCartWrapper">
           <AddShoppingCartIcon
@@ -42,6 +58,10 @@ function WishList_item({ item, removeFromWishList, addItemToCart }) {
   );
 }
 
+const mapState = (state) => ({
+  wishList: state.wishList.itemsInWishList,
+});
+
 const mapDispatch = (dispatch) => ({
   removeFromWishList(item) {
     dispatch(actionCreators.removeFromWishList(item));
@@ -51,4 +71,4 @@ const mapDispatch = (dispatch) => ({
   },
 });
 
-export default connect(null, mapDispatch)(WishList_item);
+export default connect(mapState, mapDispatch)(WishList_item);
