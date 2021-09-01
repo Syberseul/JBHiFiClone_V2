@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { actionCreators } from "../store";
 import { actionCreators as wishListActionCreators } from "../../WishList/store";
@@ -13,6 +13,18 @@ function Home_item(props) {
   const { title, price, image, category } = props.item;
 
   let foundItem = wishList.find((obj) => obj.title === title);
+
+  const [inWishList, setInWishList] = useState(foundItem ? true : false);
+
+  const addItem = (item) => {
+    addToWishList(item);
+    setInWishList(!inWishList);
+  };
+
+  const removeItem = (item) => {
+    removeFromWishList(item);
+    setInWishList(!inWishList);
+  };
 
   return (
     <div className="homeItem">
@@ -30,11 +42,9 @@ function Home_item(props) {
         <div>
           <FavoriteBorderIcon
             className="homeItem__addToWishList"
-            style={{ color: foundItem ? "red" : "black" }}
+            style={{ color: inWishList ? "red" : "black" }}
             onClick={() => {
-              foundItem
-                ? removeFromWishList(props.item)
-                : addToWishList(props.item);
+              inWishList ? removeItem(props.item) : addItem(props.item);
             }}
           />
           {foundItem ? (

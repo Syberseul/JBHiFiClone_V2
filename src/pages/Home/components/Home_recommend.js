@@ -11,7 +11,7 @@ function Home_recommend({ items, fetchHomeData }) {
 
   return (
     <div className="homeRecommend">
-      <p className="homeRecommend__title">Recommended for you</p>
+      <p className="homeRecommend__title">Recommend for you</p>
       <div className="homeRecommend__itemContainer">
         {items.map((item, index) => (
           <Home_item key={index} item={item} />

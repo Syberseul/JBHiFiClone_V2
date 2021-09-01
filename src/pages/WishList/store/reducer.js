@@ -9,7 +9,7 @@ const addToWishList = (state, action) => {
   const { item } = action;
   const { itemsInWishList } = state;
 
-  let foundItem = itemsInWishList.find((obj) => obj.id === item.id);
+  let foundItem = itemsInWishList.find((obj) => obj.title === item.title);
 
   if (!foundItem) {
     return {
@@ -24,10 +24,17 @@ const addToWishList = (state, action) => {
 // remove
 const removeFromWishList = (state, { item }) => {
   let { itemsInWishList } = state;
-  let foundIndex = itemsInWishList.findIndex((i) => i.id === item.id);
-  itemsInWishList.splice(foundIndex, 1);
+  let foundItem = itemsInWishList.find((obj) => obj.title === item.title);
 
-  return state;
+  if (foundItem) {
+    let foundIndex = itemsInWishList.findIndex((i) => i.id === foundItem.id);
+    let tempList = [...itemsInWishList, itemsInWishList.splice(foundIndex, 1)];
+  }
+
+  return {
+    ...state,
+    itemsInWishList: itemsInWishList,
+  };
 };
 
 export default (state = defaultState, action) => {
