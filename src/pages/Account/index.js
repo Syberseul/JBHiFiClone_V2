@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
 import { auth, uiConfig } from "../../server/firebase";
 import { StyledFirebaseAuth } from "react-firebaseui";
 import "./account.css";
-import { useEffect } from "react";
 
 function Account({ userLogIn, userLogOut }) {
   const [signedIn, setSignedIn] = useState(false);
@@ -17,6 +16,8 @@ function Account({ userLogIn, userLogOut }) {
 
   let user = auth.currentUser;
   if (user) userLogIn(user);
+
+  console.log(signedIn);
 
   return (
     <div className="account">
@@ -34,7 +35,6 @@ function Account({ userLogIn, userLogOut }) {
         </div>
       ) : (
         <div>
-          <p>hello</p>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
         </div>
       )}

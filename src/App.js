@@ -18,7 +18,7 @@ function App() {
         <Route path="/wishList">
           <WishList />
         </Route>
-        <Route path="login">
+        <Route path="/login">
           <SignIn />
         </Route>
         {/* <Route path="/account">My Account</Route> */}
