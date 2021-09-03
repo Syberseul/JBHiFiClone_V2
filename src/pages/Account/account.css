@@ -14,7 +14,7 @@
   font-weight: bold;
 }
 
-.account__loggedIn > button {
+.account__button {
   margin-top: 4rem;
   padding: 10px 25px;
   font-size: 1.5rem;
@@ -24,7 +24,7 @@
   transition: 0.5s;
 }
 
-.account__loggedIn > button:hover {
+.account__button:hover {
   transform: scale(1.2);
   box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
 }

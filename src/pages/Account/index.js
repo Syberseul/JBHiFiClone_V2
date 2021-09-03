@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { actionCreators } from "./store";
 import { auth, uiConfig } from "../../server/firebase";
 import { StyledFirebaseAuth } from "react-firebaseui";
+import { Link } from "react-router-dom";
 import "./account.css";
 
 function Account({ userLogIn, userLogOut }) {
@@ -10,21 +11,28 @@ function Account({ userLogIn, userLogOut }) {
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      setSignedIn(!user);
+      setSignedIn(!!user);
     });
   }, [signedIn]);
 
   let user = auth.currentUser;
   if (user) userLogIn(user);
 
-  console.log(signedIn);
+  console.log(user);
 
   return (
     <div className="account">
       {signedIn ? (
         <div className="account__loggedIn">
           <p>Hello: {user.displayName} !</p>
+          <Link to="/">
+            <button className="account__button">Go to shopping</button>
+          </Link>
+          <Link to="/wishList">
+            <button className="account__button">Check your wish list</button>
+          </Link>
           <button
+            className="account__button"
             onClick={() => {
               auth.signOut();
               userLogOut();

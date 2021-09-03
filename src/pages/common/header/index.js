@@ -30,6 +30,8 @@ import logo from "../../../static/logo.jpg";
 function Header({
   menuOpen,
   itemsAmountInCart,
+  loggedIn,
+  user,
   toggleMenuOpen,
   toggleMenuClose,
 }) {
@@ -62,9 +64,17 @@ function Header({
               onClick={menuOpen && toggleMenuClose}
             >
               <div className="header__mobileWrapper">
-                <AccountCircleIcon />
-                {/* {loggedIn && <p>{userName}</p>} */}
-                <p className="header__mobileText">Account</p>
+                {loggedIn ? (
+                  <>
+                    <img src={user.photoURL} alt="" />
+                    <p>{user.userName}</p>
+                  </>
+                ) : (
+                  <>
+                    <AccountCircleIcon />
+                    <p style={{ cursor: "pointer" }}>My Account</p>
+                  </>
+                )}
               </div>
             </Link>
             <Link
@@ -93,8 +103,7 @@ function Header({
           </div>
           <div className="header__iconsWrapper">
             <Link
-              // to={loggedIn ? "/wishList" : "/login"}
-              to="/wishList"
+              to={loggedIn ? "/wishList" : "/login"}
               className="header__link"
             >
               <div className="header__subIconWrapper">
@@ -104,9 +113,17 @@ function Header({
             </Link>
             <Link to="/login" className="header__link">
               <div className="header__subIconWrapper">
-                <AccountCircleIcon />
-                {/* {loggedIn && <p>{userName}</p>} */}
-                <p style={{ cursor: "pointer" }}>My Account</p>
+                {loggedIn ? (
+                  <>
+                    <img src={user.photoURL} alt="" />
+                    <p>{user.userName}</p>
+                  </>
+                ) : (
+                  <>
+                    <AccountCircleIcon />
+                    <p style={{ cursor: "pointer" }}>My Account</p>
+                  </>
+                )}
               </div>
             </Link>
             <Link to="/cart" className="header__link">
@@ -140,6 +157,8 @@ function Header({
 const mapState = (state) => ({
   menuOpen: state.header.menuOpen,
   itemsAmountInCart: state.cart.totalAmount,
+  loggedIn: state.account.userLoggedIn,
+  user: state.account.user,
 });
 
 const mapDispatch = (dispatch) => ({

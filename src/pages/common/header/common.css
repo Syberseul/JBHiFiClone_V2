@@ -16,6 +16,11 @@
   cursor: pointer;
   position: relative;
 }
+.header__mobileWrapper > img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
 .header__mobileText {
   text-align: center;
   font-size: 10px;
@@ -103,6 +108,11 @@
   margin-left: 20px;
   cursor: pointer;
   position: relative;
+}
+.header__subIconWrapper > img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
 }
 .header__PcQuantity {
   position: absolute;

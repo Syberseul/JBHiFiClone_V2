@@ -2,14 +2,20 @@ import * as actionTypes from "./actionTypes";
 
 const defaultState = {
   userLoggedIn: false,
-  userName: "",
+  user: {
+    userName: "",
+    photoURL: "",
+  },
 };
 
 const userLogIn = (state, action) => {
   if (action.user !== undefined) {
     return {
       userLoggedIn: true,
-      userName: action.user.displayName,
+      user: {
+        userName: action.user.displayName,
+        photoURL: action.user.photoURL,
+      },
     };
   }
   return state;
@@ -18,7 +24,10 @@ const userLogIn = (state, action) => {
 const userLogOut = (state, action) => {
   return {
     userLoggedIn: false,
-    userName: "",
+    user: {
+      userName: "",
+      photoURL: "",
+    },
   };
 };
 
