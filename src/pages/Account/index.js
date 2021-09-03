@@ -18,8 +18,6 @@ function Account({ userLogIn, userLogOut }) {
   let user = auth.currentUser;
   if (user) userLogIn(user);
 
-  console.log(user);
-
   return (
     <div className="account">
       {signedIn ? (
