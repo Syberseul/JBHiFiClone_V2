@@ -1,6 +1,4 @@
-# Refactoring......
-
-# JB Hi-Fi Clone (Official page: https://www.jbhifi.com.au/)
+# <p align="center"> <a href="https://jb-hifi-clone-yiteng.web.app/"> JB-HiFi Clone </a>(Official page: https://www.jbhifi.com.au/)
 
 - ### About the Project:
   A clone version of an official website with React-Redux.
