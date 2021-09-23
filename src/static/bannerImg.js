@@ -1,5 +1,5 @@
-export const banner_1 =
-  "https://images.ctfassets.net/i2qsnovxhn7q/36iagnwAzH7fEKftfm0f6K/0c1e63b52920cd4e59e5183729f9e7f1/jb-au-20200917-mobile-madness-ongoing_HEADER_DESKTOP_STD.jpg?fm=webp";
+// export const banner_1 =
+//   "https://images.ctfassets.net/i2qsnovxhn7q/36iagnwAzH7fEKftfm0f6K/0c1e63b52920cd4e59e5183729f9e7f1/jb-au-20200917-mobile-madness-ongoing_HEADER_DESKTOP_STD.jpg?fm=webp";
 
 export const banner_2 =
   "https://images.ctfassets.net/i2qsnovxhn7q/6XHgTVMq10WsnOty1LIpZA/7134be6412476b4a9915baf5d4d04333/jb-au-20210701-telco-plan-samsung-s21-0-upfront_HEADER_DESKTOP_STD.jpg?fm=webp";

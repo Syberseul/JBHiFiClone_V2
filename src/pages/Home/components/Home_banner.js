@@ -13,10 +13,10 @@ function Home_banner() {
         infiniteLoop
         showIndicators
         showStatus={false}
-        showThumbs={false}
+        showThumbs={true}
         interval={3000}
       >
-        <Home_banner_img src={banners.banner_1} />
+        {/* <Home_banner_img src={banners.banner_1} /> */}
         <Home_banner_img src={banners.banner_2} />
         <Home_banner_img src={banners.banner_3} />
         <Home_banner_img src={banners.banner_4} />
