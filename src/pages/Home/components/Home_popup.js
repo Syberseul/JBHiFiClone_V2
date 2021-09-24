@@ -21,9 +21,9 @@ function Home_popup() {
               corner
             </p>
             <p className="popup_listItem">
-              - You can also add items to wishlist, but need to log in via your
-              Google account, Github account or email - Authentication been
-              provided
+              - You can also add items to wishlist. To check your wish list, you
+              need to log in via your Google account, Github account or email -
+              Authentication been provided
             </p>
           </div>
           <button className="popup_btn" onClick={() => handleCloseBtn()}>
