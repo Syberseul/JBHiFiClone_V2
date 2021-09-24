@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap");
 
 .cart__empty {
   width: 100%;
@@ -13,12 +14,13 @@
 
 .cart__text {
   margin: 25px auto;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart__redirect {
-  font-weight: bold;
   padding: 15px 20px;
   border: 1px solid #000;
+  font-family: "Ramabhadra", cursive;
   cursor: pointer;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -45,6 +47,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin: 40px 5px;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart__summaryFirstLineWrapper {
@@ -60,29 +63,29 @@
 .cart__summaryDelivery {
   padding-left: 10px;
   font-size: 1.2rem;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart__summaryLastLine {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 50px;
 }
 
 .cart__summaryLastLine > p {
   width: 70%;
 }
 
-.cart__summaryLastLine > .cart__summaryText {
+.cart__summaryText {
   color: #aaa;
+  font-family: "Yaldevi", cursive;
 }
 
 .cart__summaryLastLineWrapper {
   width: 30%;
   display: flex;
-}
-
-.cart__summaryLastLineWrapper > .cart__summaryText {
-  text-align: end;
+  justify-content: space-around;
 }
 
 .cart__item {
@@ -146,6 +149,8 @@
   font-size: 1.5rem;
   text-decoration: underline;
   cursor: pointer;
+  font-family: "Yaldevi", cursive;
+  font-weight: bold;
 }
 
 .cart__itemRemove:hover {
@@ -170,15 +175,18 @@
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  font-family: "Yaldevi", cursive;
 }
 
 .cart__itemAmount {
   margin: 0 20px;
   font-size: 20px;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart__itemPrice {
   font-size: 1.5rem;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart__subTotal {
@@ -214,17 +222,20 @@
 .cart__subTotalPrice {
   font-size: 1.75rem;
   font-weight: 300;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart_subTotalGST {
   font-size: 1.25rem;
   font-weight: 100;
   color: #ccc;
+  font-family: "Yaldevi", cursive;
 }
 
 .cart__subTotalDelivery {
   font-size: 1.25rem;
   font-weight: 300;
+  font-family: "Yaldevi", cursive;
 }
 
 .cart__subTotalSecondLine {
@@ -252,6 +263,7 @@
   font-size: 1.25rem;
   font-weight: bold;
   padding: 0.75rem 1rem;
+  font-family: "Ramabhadra", cursive;
 }
 
 .cart__subTotalSecondLineLeft {
@@ -270,6 +282,7 @@
   vertical-align: middle;
   font-size: 1.25rem;
   line-height: 1.25rem;
+  font-family: "Ramabhadra", cursive;
 }
 
 @media only screen and (max-width: 640px) {

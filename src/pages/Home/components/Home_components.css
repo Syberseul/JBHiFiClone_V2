@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap");
 
 .homeBanner {
   width: 100%;
@@ -125,6 +126,7 @@
   cursor: default;
   display: none;
   z-index: 10;
+  font-family: "Yaldevi", cursive;
 }
 
 .toWishList {

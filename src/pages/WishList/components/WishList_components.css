@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap");
 
 .wishList__itemList {
   display: flex;
@@ -119,6 +120,7 @@
   top: -40px;
   padding: 10px;
   border: 1px solid #bbb;
+  font-family: "Yaldevi", sans-serif;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 2px 2px rgba(100, 100, 100, 0.5);
@@ -133,6 +135,7 @@
   top: -40px;
   padding: 10px;
   border: 1px solid #bbb;
+  font-family: "Yaldevi", sans-serif;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 2px 2px rgba(100, 100, 100, 0.5);
@@ -162,12 +165,13 @@
 
 .wishList__text {
   margin: 25px auto;
+  font-family: "Ramabhadra", cursive;
 }
 
 .wishList__back {
-  font-weight: bold;
   padding: 15px 20px;
   border: 1px solid #000;
+  font-family: "Ramabhadra", cursive;
   cursor: pointer;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }

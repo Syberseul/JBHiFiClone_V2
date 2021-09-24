@@ -38,7 +38,7 @@ function Cart_item({ item, incrementItem, decrementItem, deleteItem }) {
             +{" "}
           </p>
         </div>
-        <p className="cart__itemPrice">${(price * amount).toFixed(2)}</p>
+        <p className="cart__itemPrice">$ {(price * amount).toFixed(2)}</p>
       </div>
     </div>
   ) : (
