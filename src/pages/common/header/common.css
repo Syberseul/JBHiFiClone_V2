@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap");
+
 .header__wrapperLine__1 {
   width: 100%;
   max-width: 1100px;
@@ -21,9 +23,16 @@
   height: 25px;
   border-radius: 50%;
 }
+.header__mobileWrapper > p {
+  font-family: "Yaldevi", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+}
+
 .header__mobileText {
   text-align: center;
   font-size: 10px;
+  font-weight: bold;
 }
 .header__wrapper {
   display: flex;
@@ -37,6 +46,8 @@
 .header__storeFinder {
   text-align: center;
   cursor: pointer;
+  font-family: "Yaldevi", sans-serif;
+  font-weight: bold;
 }
 .header__phoneImg {
   width: 200px;
@@ -113,6 +124,10 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+.header__subIconWrapper > p {
+  font-family: "Yaldevi", sans-serif;
+  font-weight: bold;
 }
 .header__PcQuantity {
   position: absolute;

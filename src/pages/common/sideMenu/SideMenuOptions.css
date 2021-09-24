@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap");
+
 .sideMenuOptions {
   display: flex;
   align-items: center;
@@ -27,6 +29,11 @@
   font-size: 1.5rem;
   height: 2.5rem;
   padding: 10px 20px;
+}
+
+.sideMenuOption__line > p {
+  font-family: "Yaldevi", sans-serif;
+  font-weight: bold;
 }
 
 .sideMenuOption__icon {
