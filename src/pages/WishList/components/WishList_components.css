@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
 
 .wishList__itemList {
@@ -74,6 +75,7 @@
   font-weight: bold;
   color: red;
   position: absolute;
+  font-family: "Boogaloo", cursive;
   top: -15px;
   left: 15px;
   border: 1px solid #000;

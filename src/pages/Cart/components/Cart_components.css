@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
+
 .cart__empty {
   width: 100%;
   height: 80vh;
@@ -114,14 +116,16 @@
 }
 
 .cart__itemTitle {
+  font-family: "Ramabhadra", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .cart__itemDescription {
   margin-top: 20px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.5rem;
+  font-weight: bold;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;

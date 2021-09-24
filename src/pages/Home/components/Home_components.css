@@ -91,6 +91,7 @@
   font-weight: bold;
   color: red;
   position: absolute;
+  font-family: "Boogaloo", cursive;
   top: -15px;
   left: 15px;
   border: 1px solid #000;
