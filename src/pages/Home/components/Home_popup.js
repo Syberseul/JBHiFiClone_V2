@@ -17,8 +17,8 @@ function Home_popup() {
               - This is the demo of JB Hi-Fi Official Website
             </p>
             <p className="popup_listItem">
-              - You can add items into your cart and can access it on top-right
-              corner
+              - You can add items into your cart and can access cart from
+              top-right corner of the page
             </p>
             <p className="popup_listItem">
               - You can also add items to wishlist. To check your wish list, you

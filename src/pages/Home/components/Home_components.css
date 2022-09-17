@@ -72,12 +72,12 @@
 
 .homeItem__title {
   line-height: 30px;
-  font-weight: bold;
   font-size: 1rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  font-family: "Ramabhadra", sans-serif;
 }
 
 .homeItem__lowerWrapper {
@@ -182,6 +182,7 @@
 
 .popup {
   position: fixed;
+  font-family: "Boogaloo", cursive;
   width: 100%;
   height: 100%;
   display: flex;
@@ -192,6 +193,7 @@
 }
 
 .popup_container {
+  border-radius: 20px;
   background: rgba(255, 252, 77, 0.85);
   position: absolute;
   height: 400px;
@@ -211,10 +213,12 @@
 
 .popup_listItem {
   padding: 1rem 0.5rem;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .popup_btn {
+  font-family: "Boogaloo", cursive;
   margin-top: 1rem;
   margin-left: 30%;
   width: 10rem;
@@ -222,7 +226,7 @@
   cursor: pointer;
   border-radius: 1rem;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: bold;
   outline: none;
 }
 
